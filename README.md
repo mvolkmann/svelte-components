@@ -42,3 +42,21 @@
 - ex. `import {LabeledInput, Select} from rmv-svelte-components;`
 
 1. Use the components like any other Svelte component.
+
+For example:
+
+```html
+<script>
+  import {LabeledInput, Select} from 'rmv-svelte-components';
+  let color = '';
+  let name = 'Mark';
+  let options = ['', 'red', 'green', 'blue'];
+</script>
+
+<main>
+  <LabeledInput label="Name" bind:value="{name}" />
+  <p>Hello, {name}!</p>
+  <Select options={options} on:select={event => color = event.detail} />
+  <p>You selected the color {color}.</p>
+</main>
+```
