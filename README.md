@@ -4,13 +4,13 @@
 
 1. Choose a library name that is not already registered in npm.
 1. Create the library by entering
-   - `npx degit sveltejs/component-template` _`library-name`_
-1. `cd` _`library-name`_
+   - `npx degit sveltejs/component-template library-name`
+1. `cd library-name`
 1. Change the `input` property in `rollup.config.js`
    from `src/index.svelte` to `src/index.js`.
 1. Add a `name` property in `package.json`.
 
-   - `"name": "`_`library-name`_`",`
+   - `"name": "library-name",`
 
 1. Add a version property in `package.json`.
 
@@ -27,7 +27,7 @@
 
 1. Create the component `.svelte` files in the `src` directory.
 1. Create a GitHub repository for the library.
-1. Add this directory to the GitHub repository.
+1. Add the contents of this directory to the GitHub repository.
 1. If not already logged into npm, enter `npm login`.
 1. Publish this library to npm with `npm pub`.
 
@@ -36,8 +36,8 @@
 
 ## To use these components in a Svelte application
 
-1. Install the library by entering `npm install` _`library-name`_
-1. Import components to be used.
+1. Install the library by entering `npm install library-name`
+1. Import the components to be used.
 
 - ex. `import {LabeledInput, Select} from rmv-svelte-components;`
 
