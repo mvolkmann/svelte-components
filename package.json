@@ -1,5 +1,5 @@
 {
-  "name": "svelte-components",
+  "name": "rmv-svelte-components",
   "version": "0.1.0",
   "svelte": "src/index.js",
   "module": "index.mjs",
