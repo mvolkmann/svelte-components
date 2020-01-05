@@ -5,5 +5,5 @@
 
 <label>
   {label}
-  <input bind:value={value}
+  <input bind:value={value}>
 </label>
