@@ -6,6 +6,8 @@
 1. Create the library by entering
    - `npx degit sveltejs/component-template` _`library-name`_
 1. `cd` _`library-name`_
+1. Change the `input` property in `rollup.config.js`
+   from `src/index.svelte` to `src/index.js`.
 1. Add a `name` property in `package.json`.
 
    - `"name": "`_`library-name`_`",`
