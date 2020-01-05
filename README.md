@@ -29,10 +29,15 @@
 1. Create a GitHub repository for the library.
 1. Add the contents of this directory to the GitHub repository.
 1. If not already logged into npm, enter `npm login`.
-1. Publish this library to npm with `npm pub`.
+1. Every time changes need to be published,
+   bump the version in `package.json`
+   and tag the GitHub repository.
 
-- Every time changes need to be published,
-  bump the version in `package.json`.
+   - `npm version patch|minor|major`
+   - `git push --tags`
+   - `git push`
+
+1. Publish this library to npm with `npm pub`.
 
 ## To use these components in a Svelte application
 
