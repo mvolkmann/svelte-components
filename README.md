@@ -1,33 +1,33 @@
-*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*
+# svelte-components
 
----
+Steps to create a library of reusable Svelte components:
 
-# component-template
+1. Choose a library name that is not already registered in npm.
+2. Create the library by entering
+   `npx degit sveltejs/component-template` _`library-name`_.
+3. `cd` _`library-name`_
+4. Add a `name` property in `package.json`.
 
-A base for building shareable Svelte components. Clone it with [degit](https://github.com/Rich-Harris/degit):
+- `"name": "`_`library-name`_`",`
 
-```bash
-npx degit sveltejs/component-template my-new-component
-cd my-new-component
-npm install # or yarn
-```
+5. Add a version property in `package.json`.
 
-Your component's source code lives in `src/index.svelte`.
+- ex. `"version": "0.1.0",`
 
-TODO
+6. Change the value of the `main` property in `package.json`.
 
-* [ ] some firm opinions about the best way to test components
-* [ ] update `degit` so that it automates some of the setup work
+- `"main": "index.js",`
 
+7. Rename `src/index.svelte` to `src/index.js`.
+8. Replace the content of `src/index.js` with a line like the following for each component:
 
-## Setting up
+   - `export {default as MyComponentName} from './MyComponentName.svelte';`
 
-* Run `npm init` (or `yarn init`)
-* Replace this README with your own
+9. Create the component `.svelte` files in the `src` directory.
+10. Create a GitHub repository for the library.
+11. Add this directory to the GitHub repository.
+12. If not already logged into npm, enter `npm login`.
+13. Publish this library to npm with `npm pub`.
 
-
-## Consuming components
-
-Your package.json has a `"svelte"` field pointing to `src/index.svelte`, which allows Svelte apps to import the source code directly, if they are using a bundler plugin like [rollup-plugin-svelte](https://github.com/sveltejs/rollup-plugin-svelte) or [svelte-loader](https://github.com/sveltejs/svelte-loader) (where [`resolve.mainFields`](https://webpack.js.org/configuration/resolve/#resolve-mainfields) in your webpack config includes `"svelte"`). **This is recommended.**
-
-For everyone else, `npm run build` will bundle your component's source code into a plain JavaScript module (`index.mjs`) and a UMD script (`index.js`). This will happen automatically when you publish your component to npm, courtesy of the `prepublishOnly` hook in package.json.
+- Every time changes need to be published,
+  bump the version in `package.json`.
