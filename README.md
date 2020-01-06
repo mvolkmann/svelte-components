@@ -12,7 +12,7 @@
 
    - `"name": "library-name",`
 
-1. Add a version property in `package.json`.
+1. Add a `version` property in `package.json`.
 
    - ex. `"version": "0.1.0",`
 
